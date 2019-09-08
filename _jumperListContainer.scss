@@ -1,0 +1,84 @@
+.jumper-list-container {
+    grid-area: jumpers;
+    position: relative;
+    background: var(--clr-cardBackground);
+    margin: 0.25em;
+    height: 80vh;
+
+    .header {
+        text-align: center;
+    }
+  
+    .tabs {
+      display: flex;
+      border-bottom: 1px solid black; 
+      justify-content: space-around;
+    }
+  
+    .tab {
+      cursor: pointer;
+      padding: 10px;
+    }
+  
+    .tab:hover, .tab.active {
+      background: var(--clr-light);
+    }
+
+    .jumper-list {
+        display: grid;
+        grid-template-columns: 1fr;
+        height: 50vh;
+        margin: 1em;
+        background: var(--clr-light);
+
+        li {
+            display: grid;
+            margin-bottom: 5px;
+            margin-right: 1em;
+            margin-left: 1em;
+            background: inherit;
+
+            &:hover {
+                background: var(--clr-cardBackground);
+                cursor: grab;
+            }
+        }
+        
+    }
+    .jumper {
+        padding-left: 1em;
+        background: var(--clr-light);
+    }
+  
+    .jumper-menu {
+      position: absolute;
+      bottom: 0;
+  
+      form {
+        display: flex;
+        margin-bottom: 10px;
+  
+        .new-jumper {
+          order: 2;
+          border: 0;
+          background: 0;
+          border-bottom: 1px solid currentColor;
+          font-size: 1em;
+          transition: border-bottom 250ms ease-in;
+          outline: none; // bad to do 
+        }
+  
+        .new-jumper:focus {
+          border-bottom: 3px solid currentColor;
+        }
+  
+        button {
+          background: 0;
+          order: 1;
+          font-size: 1em;
+          font-weight: bold;
+          outline: none; // again bad to do
+        }
+      }
+    }
+  }

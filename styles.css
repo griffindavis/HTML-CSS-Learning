@@ -10,7 +10,8 @@
 *::before,
 *::after {
   font-family: inherit;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
@@ -20,13 +21,11 @@ body {
   font-size: 1.5rem;
   background-color: var(--clr-primary);
   color: #000000;
-
+  display: -ms-grid;
   display: grid;
-  grid:
-    "header header header header" auto
-    "load load load jumpers" auto
-    "load load load jumpers" auto /
-    1fr 1fr 1fr 2fr;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  grid: "header header header header" auto "load load load jumpers" auto "load load load jumpers" auto / 1fr 1fr 1fr 2fr;
 }
 
 .header-menu {
@@ -37,35 +36,144 @@ body {
   margin-bottom: 0.5em;
 }
 
+ul {
+  list-style: none;
+  padding: 0;
+}
+
 .jumper-list-container {
   grid-area: jumpers;
+  position: relative;
   background: var(--clr-cardBackground);
   margin: 0.25em;
   height: 80vh;
 }
 
-.load-container {
-  grid-area: load;
-}
-
-.load-card {
-  float: left;
-  background: var(--clr-cardBackground);
-  margin-top: 0.25em;
-  margin-bottom: 0.25rem;
-  margin-left: 0.5em;
-  margin-right: 0.5em;
-  width: 28%;
-  height: 33%;
-  font-size: 1.1rem;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.load-card {
+.jumper-list-container .header {
   text-align: center;
 }
 
-ul {
-  list-style: none;
-  padding: 0;
+.jumper-list-container .tabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 1px solid black;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
+
+.jumper-list-container .tab {
+  cursor: pointer;
+  padding: 10px;
+}
+
+.jumper-list-container .tab:hover, .jumper-list-container .tab.active {
+  background: var(--clr-light);
+}
+
+.jumper-list-container .jumper-list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  height: 50vh;
+  margin: 1em;
+  background: var(--clr-light);
+}
+
+.jumper-list-container .jumper-list li {
+  display: -ms-grid;
+  display: grid;
+  margin-bottom: 5px;
+  margin-right: 1em;
+  margin-left: 1em;
+  background: inherit;
+}
+
+.jumper-list-container .jumper-list li:hover {
+  background: var(--clr-cardBackground);
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.jumper-list-container .jumper {
+  padding-left: 1em;
+  background: var(--clr-light);
+}
+
+.jumper-list-container .jumper-menu {
+  position: absolute;
+  bottom: 0;
+}
+
+.jumper-list-container .jumper-menu form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.jumper-list-container .jumper-menu form .new-jumper {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  border: 0;
+  background: 0;
+  border-bottom: 1px solid currentColor;
+  font-size: 1em;
+  -webkit-transition: border-bottom 250ms ease-in;
+  transition: border-bottom 250ms ease-in;
+  outline: none;
+}
+
+.jumper-list-container .jumper-menu form .new-jumper:focus {
+  border-bottom: 3px solid currentColor;
+}
+
+.jumper-list-container .jumper-menu form button {
+  background: 0;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  font-size: 1em;
+  font-weight: bold;
+  outline: none;
+}
+
+.load-container {
+  grid-area: load;
+  margin-left: 1.2em;
+}
+
+.load-container .load-card {
+  float: left;
+  background: var(--clr-cardBackground);
+  margin: 0.25em 0.5em 0.25em 0.5em;
+  width: 30%;
+  height: 33%;
+  font-size: 1.1rem;
+  text-align: center;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.load-container .load-card li {
+  text-align: left;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  margin-bottom: 10px;
+  width: calc(100% - 2em);
+  position: relative;
+  padding-left: 1em;
+  margin-left: 1em;
+  margin-right: 1em;
+  background: var(--clr-light);
+}
+
+.load-container .load-card li:hover {
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+/*# sourceMappingURL=styles.css.map */

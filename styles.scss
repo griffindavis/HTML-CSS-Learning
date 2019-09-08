@@ -1,0 +1,48 @@
+:root {
+  --clr-primary: rgb(102, 100, 102);
+  --clr-light:  rgb(236, 236, 236);
+  --clr-dark: #333;
+  --clr-warning: rgb(99, 36, 36);
+  --clr-cardBackground: #E0E0E0;
+}
+
+*,
+*::before,
+*::after {
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 300;
+  font-size: 1.5rem;
+  background-color: var(--clr-primary);
+  color: #000000;
+
+  display: grid;
+  align-content: center;
+  grid:
+    "header header header header" auto
+    "load load load jumpers" auto
+    "load load load jumpers" auto /
+    1fr 1fr 1fr 2fr;
+}
+
+.header-menu {
+  position: relative;
+  grid-area: header;
+  text-align: center;
+  background: var(--clr-cardBackground);
+  margin-bottom: 0.5em;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+@import "_jumperListContainer.scss";
+
+@import "_loadContainer.scss";

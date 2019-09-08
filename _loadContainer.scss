@@ -1,0 +1,33 @@
+.load-container {
+    grid-area: load;
+    margin-left: 1.2em;
+  
+    .load-card {
+      float: left;
+      background: var(--clr-cardBackground);
+      margin: 0.25em 0.5em 0.25em 0.5em;
+      width: 30%;
+      height: 33%;
+      font-size: 1.1rem;
+      text-align: center;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  
+      li {
+        text-align: left;
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-bottom: 10px;
+        width: calc(100% - 2em);
+        position: relative;
+        padding-left: 1em;
+        margin-left: 1em;
+        margin-right: 1em;
+        background: var(--clr-light);
+        // /border: 2px solid black;
+  
+        &:hover {
+          cursor: grab;
+        }
+      }
+    }
+  }
