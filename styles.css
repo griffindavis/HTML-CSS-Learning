@@ -1,0 +1,71 @@
+:root {
+  --clr-primary: rgb(102, 100, 102);
+  --clr-light:  rgb(236, 236, 236);
+  --clr-dark: #333;
+  --clr-warning: rgb(99, 36, 36);
+  --clr-cardBackground: #E0E0E0;
+}
+
+*,
+*::before,
+*::after {
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 300;
+  font-size: 1.5rem;
+  background-color: var(--clr-primary);
+  color: #000000;
+
+  display: grid;
+  grid:
+    "header header header header" auto
+    "load load load jumpers" auto
+    "load load load jumpers" auto /
+    1fr 1fr 1fr 2fr;
+}
+
+.header-menu {
+  position: relative;
+  grid-area: header;
+  text-align: center;
+  background: var(--clr-cardBackground);
+  margin-bottom: 0.5em;
+}
+
+.jumper-list-container {
+  grid-area: jumpers;
+  background: var(--clr-cardBackground);
+  margin: 0.25em;
+  height: 80vh;
+}
+
+.load-container {
+  grid-area: load;
+}
+
+.load-card {
+  float: left;
+  background: var(--clr-cardBackground);
+  margin-top: 0.25em;
+  margin-bottom: 0.25rem;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  width: 28%;
+  height: 33%;
+  font-size: 1.1rem;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.load-card {
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
