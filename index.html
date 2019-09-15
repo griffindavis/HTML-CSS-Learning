@@ -5,7 +5,7 @@
     <title>Testing Manager</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,700,900&display=swap">
-    <script src="script.js" defer></script>
+    <script defer src="script.js"></script>
   </head>
 
   <body>
@@ -14,7 +14,7 @@
       <h1>Menu Menu Menu Menu</h1>
     </div>
 
-    <div class="jumper-list-container">
+    <div class="jumper-list-container" data-jumper-list-container>
 
       <div class="header-container">
           <h2 class="header">List of Jumpers</h2>
@@ -27,7 +27,7 @@
       </div>
 
       <div class="jumper-list">
-        <ul>
+        <ul data-jumper-list>
           <li class="jumper">Jumper 1</li>
           <li class="jumper">Jumper 2</li>
           <li class="jumper">Jumper 3</li>
@@ -37,17 +37,20 @@
       </div>
 
       <div class="jumper-menu">
-        <form action="">
+        <form action="" data-new-jumper-form>
           <input
             type="text"
             class="new-jumper"
             placeholder="New Jumper Name"
-            aria-label="New Jumper Name">
+            aria-label="New Jumper Name"
+            data-new-jumper-input>
           <button
             type="button"
             name="button"
             aria-label="button">+</button>
         </form>
+
+        <button data-delete-jumper>Delete Jumper</button>
       </div>
     </div>
 

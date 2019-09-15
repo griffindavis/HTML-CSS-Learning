@@ -31,7 +31,7 @@
         margin: 1em;
         background: var(--clr-light);
 
-        li {
+        .jumper {
             display: grid;
             margin-bottom: 5px;
             margin-right: 1em;
@@ -43,6 +43,10 @@
                 cursor: grab;
             }
         }
+
+        .active-jumper {
+          background: var(--clr-cardBackground);
+        }
         
     }
     .jumper {
@@ -53,6 +57,7 @@
     .jumper-menu {
       position: absolute;
       bottom: 0;
+      display: flex;
   
       form {
         display: flex;
@@ -77,8 +82,20 @@
           order: 1;
           font-size: 1em;
           font-weight: bold;
-          outline: none; // again bad to do
         }
       }
+
+      button {
+        background: 0;
+        outline: none;
+        position: relative;
+        margin-left: 1em;
+
+
+      }
     }
+  }
+
+  .custom-checkbox {
+    display: inline-block;
   }

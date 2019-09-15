@@ -81,7 +81,7 @@ ul {
   background: var(--clr-light);
 }
 
-.jumper-list-container .jumper-list li {
+.jumper-list-container .jumper-list .jumper {
   display: -ms-grid;
   display: grid;
   margin-bottom: 5px;
@@ -90,10 +90,14 @@ ul {
   background: inherit;
 }
 
-.jumper-list-container .jumper-list li:hover {
+.jumper-list-container .jumper-list .jumper:hover {
   background: var(--clr-cardBackground);
   cursor: -webkit-grab;
   cursor: grab;
+}
+
+.jumper-list-container .jumper-list .active-jumper {
+  background: var(--clr-cardBackground);
 }
 
 .jumper-list-container .jumper {
@@ -104,6 +108,9 @@ ul {
 .jumper-list-container .jumper-menu {
   position: absolute;
   bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .jumper-list-container .jumper-menu form {
@@ -137,7 +144,17 @@ ul {
           order: 1;
   font-size: 1em;
   font-weight: bold;
+}
+
+.jumper-list-container .jumper-menu button {
+  background: 0;
   outline: none;
+  position: relative;
+  margin-left: 1em;
+}
+
+.custom-checkbox {
+  display: inline-block;
 }
 
 .load-container {
