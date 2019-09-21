@@ -146,7 +146,7 @@ ul {
   font-weight: bold;
 }
 
-.jumper-list-container .jumper-menu button {
+.jumper-list-container .jumper-menu .delete-jumper {
   background: 0;
   outline: none;
   position: relative;
