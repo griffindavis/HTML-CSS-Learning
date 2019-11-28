@@ -1,7 +1,7 @@
 :root {
-  --clr-primary: rgb(102, 100, 102);
+  --clr-primary: #E5E5E5;
   --clr-light:  rgb(236, 236, 236);
-  --clr-dark: #333;
+  --clr-dark: #C4C4C4;
   --clr-warning: rgb(99, 36, 36);
   --clr-cardBackground: #E0E0E0;
 }
@@ -15,10 +15,11 @@
 
 body {
   margin: 0;
+  padding: 0;
   font-family: "Work Sans", sans-serif;
   font-weight: 300;
   font-size: 1.5rem;
-  background-color: var(--clr-primary);
+  background-color: var(--clr-dark);
   color: #000000;
 
   display: grid;
@@ -42,6 +43,8 @@ ul {
   list-style: none;
   padding: 0;
 }
+
+@import "_header.scss";
 
 @import "_jumperListContainer.scss";
 

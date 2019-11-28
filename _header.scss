@@ -1,0 +1,38 @@
+.header-menu {
+    display: flex;
+    height: 10vh;
+}
+
+.next-load {
+    width: 10%;
+    margin: 1em;
+    flex-grow: 1.5;
+    background: var(--clr-dark);
+}
+
+.weather {
+    width: 10%;
+    margin: 1em;
+    float: right;
+    flex-grow: 1;
+    background: var(--clr-dark);
+}
+
+.nav-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 1em;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+span {
+    width: 5vw;
+    height: 1vh;
+    margin: .15em;
+    margin-right: 1em;
+    background: var(--clr-dark);
+}

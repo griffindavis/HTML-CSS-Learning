@@ -11,7 +11,17 @@
   <body>
 
     <div class="header-menu">
-      <h1>Menu Menu Menu Menu</h1>
+      <nav class="nav-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </nav>
+      <div class="next-load">
+        Next Load Information
+      </div>
+      <div class="weather">
+        Weather Info
+      </div>
     </div>
 
     <div class="jumper-list-container" data-jumper-list-container>
@@ -28,11 +38,13 @@
 
       <div class="jumper-list">
         <ul data-jumper-list>
-          <li class="jumper">Jumper 1</li>
-          <li class="jumper">Jumper 2</li>
-          <li class="jumper">Jumper 3</li>
-          <li class="jumper">Jumper 4</li>
-          <li class="jumper">Jumper 5</li>
+          <!--
+          <li class="jumper" draggable="true">Jumper 1</li>
+          <li class="jumper" draggable="true">Jumper 2</li>
+          <li class="jumper" draggable="true">Jumper 3</li>
+          <li class="jumper" draggable="true">Jumper 4</li>
+          <li class="jumper" draggable="true">Jumper 5</li>
+          -->
         </ul>
       </div>
 
@@ -54,68 +66,33 @@
       </div>
     </div>
 
-    <div class="load-container">
+    <div class="load-container" data-load-container>
 
-      <div class="load-card">
-        <h2>Load #1</h2>
+      <div class="load-card" draggable="true">
+        <div class="dot-container">
+            <div class="draggable-dots"></div>
+            <div class="draggable-dots"></div>
+            <div class="draggable-dots"></div>
+        </div> <!-- end dots -->
+        <div class="load-header">Load #1</div>
         <ul>
-          <li>Jumper 1</li>
-          <li>Jumper 2</li>
-          <li>Jumper 3</li>
-          <li>Jumper 4</li>
+          <li draggable="true">Jumper 1</li>
+          <li draggable="true">Jumper 2</li>
+          <li draggable="true">Jumper 3</li>
+          <li draggable="true">Jumper 4</li>
         </ul>
-      </div>
+        <div class="buttons">
+            <button data-delete-load>Remove</button>
+            <button type="button" name="button" aria-label="button">Edit</button>
+          </div>
 
-      <div class="load-card">
-        <h2>Load #2</h2>
-        <ul>
-          <li>Jumper 1</li>
-          <li>Jumper 2</li>
-          <li>Jumper 3</li>
-          <li>Jumper 4</li>
-        </ul>
-      </div>
+        </div> <!-- end load card -->
 
-      <div class="load-card">
-        <h2>Load #3</h2>
-        <ul>
-          <li>Jumper 1</li>
-          <li>Jumper 2</li>
-          <li>Jumper 3</li>
-          <li>Jumper 4</li>
-        </ul>
-      </div>
+      <button data-add-load class="add-load-button">
+        +
+      </button>
 
-      <div class="load-card">
-        <h2>Load #4</h2>
-        <ul>
-          <li>Jumper 1</li>
-          <li>Jumper 2</li>
-          <li>Jumper 3</li>
-          <li>Jumper 4</li>
-        </ul>
-      </div>
-
-      <div class="load-card">
-        <h2>Load #5</h2>
-        <ul>
-          <li>Jumper 1</li>
-          <li>Jumper 2</li>
-          <li>Jumper 3</li>
-          <li>Jumper 4</li>
-        </ul>
-      </div>
-
-      <div class="load-card">
-        <h2>Load #6</h2>
-        <ul>
-          <li>Jumper 1</li>
-          <li>Jumper 2</li>
-          <li>Jumper 3</li>
-          <li>Jumper 4</li>
-        </ul>
-      </div>
-
+      </div> <!-- end load container -->
     </div>
 
   </body>
